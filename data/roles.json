@@ -1,0 +1,13 @@
+[{
+	"username": "stud101",
+	"password": "stud101",
+	"role": "student"
+}, {
+	"username": "stud102",
+	"password": "stud102",
+	"role": "student"
+}, {
+	"username": "librarian",
+	"password": "lib@123",
+	"role": "librarian"
+}]

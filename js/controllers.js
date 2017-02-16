@@ -7,19 +7,11 @@ var libraryModule = angular.module('libraryModule', []);
         Method1:
             validate(user): validates entered username and password and alerts appropriate messages
  */
-libraryModule.controller('LoginCtrl', function($scope) {
-	$scope.data = [
-	{
-		username: 'stud101',
-		password: 'stud101'
-	}, {
-		username: 'stud102',
-		password: 'stud102'
-	}, {
-		username: 'librarian',
-		password: 'lib@123'
-	}
-	];
+libraryModule.controller('LoginCtrl', function($scope, $http) {
+	var url = "data/roles.json";
+	$http.get(url).success(function(response) {
+		$scope.data = response;
+	});
 
 	$scope.validate = function() {
 		var found = false;
