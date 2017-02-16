@@ -44,6 +44,7 @@ libraryModule.controller('LoginCtrl', function($scope) {
         Hard code book details in json array and store this in a books model
  */
 libraryModule.controller('BookListCtrl', function($scope) {
+	$scope.title = "View Books";
 	$scope.bookDetails = [
 	{
 		"bookId": 101,

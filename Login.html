@@ -12,9 +12,7 @@
     </head>
     <body>
     <center>
-        <header>
-            <h2> {{"Library " + "Management " + "System"}} </h2>
-        </header>
+        <div ng-include="'Header.html'"></div>
     </center>
         <div align="center" ng-controller="LoginCtrl">
         <h2>
@@ -40,11 +38,6 @@
                 </div>
 
     </div>
-    <footer>
-
-            <center>
-                <h3>Nikhil Narula</h3>
-            </center>
-        </footer>
+    <div ng-include="'Footer.html'"></div>
 </body>
 </html>
