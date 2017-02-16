@@ -1,0 +1,41 @@
+body
+{
+background-color:#5C85FF;
+}
+header 
+{
+background-color:#375099;
+ color: white 
+}
+
+footer 
+{
+background-color:#375099;
+ color: white 
+}
+.button 
+{
+border-radius:10px;
+}
+.input
+{
+border-radius: 10px;
+}
+.select
+{
+border-radius: 10px;
+
+}
+.LoginFormDiv
+{
+    Border-radius: 10px;
+    background-color: #FAFAFA;
+    width:40%;
+    box-shadow: -1px -1px 2px 15px #FBFBEF;
+    -webkit-box-shadow:-5px -5px 5px 9px #E6E6E6;
+    -moz-box-shadow:0px 0px 3px 3px #FBFBEF;
+}
+.issuedClass
+{
+   background-color: green;
+}
