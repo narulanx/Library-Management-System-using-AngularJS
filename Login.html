@@ -1,7 +1,6 @@
 <!doctype html>
 
-<!--Mention the module name to <html> -->
-<html>
+<html ng-app="libraryModule">
     <head>
     <title>Angular Assignment</title>
 <style type="text/css">
@@ -14,17 +13,11 @@
     <body>
     <center>
         <header>
-            <h2> <!--Angular expression to print title of the app:
-                    Library Management System
-                --> </h2>
+            <h2> {{"Library " + "Management " + "System"}} </h2>
         </header>
     </center>
-
-    <!-- Add the required controller to this div.
-        Associate the models for username and password.
-    -->
-        <div  align="center" >
-       <h2>
+        <div align="center" ng-controller="LoginCtrl">
+        <h2>
             Login
         </h2>
 
@@ -32,16 +25,15 @@
                 <table border="0">
                     <tr>
                         <td> Username </td>
-                        <td>: <input  class="input"/></td>
+                        <td>: <input  class="input" type="text" ng-model="name"/></td>
                     </tr>
                     <tr>
                         <td> Password</td>
-                        <td>: <input  class="input"/></td>
+                        <td>: <input  class="input" type="password" ng-model="pass"/></td>
                     </tr>
                     <tr>
                         <td colspan="2">
-                            <!-- On click of the button, call validate(user)  method declared in controller-->
-                            <button class="button">Login</button>
+                            <button class="button" ng-click="validate()">Login</button>
                         </td>
                     </tr>
                 </table>
