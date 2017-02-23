@@ -75,7 +75,7 @@ libraryModule.controller('BookListCtrl_Librarian', function($scope, $location, $
  */
 libraryModule.controller('IssueBookCtrl', function($scope, $routeParams, $rootScope, $location) {
 	$scope.bookId = $routeParams.bookId;
-	$scope.title = "Issue Books";
+	$scope.title = "Issue Book";
 	$scope.book = $rootScope.books.find(function(b) {
 		return b.bookId == $scope.bookId;
 	});
@@ -93,6 +93,8 @@ libraryModule.controller('IssueBookCtrl', function($scope, $routeParams, $rootSc
  */
 libraryModule.controller('ReturnBookCtrl', function($scope, $routeParams, $rootScope, $location) {
 	$scope.bookId = $routeParams.bookId;
+
+	$scope.title = "Return Book";
 
 	$scope.book = $rootScope.books.find(function(b) {
 		return b.bookId == $scope.bookId;

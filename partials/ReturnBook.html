@@ -1,24 +1,22 @@
-  <!-- This is a partial page. have only the required code.-->
-        
-        <div  align="center">
-        <h2>
-         <!-- Bind the title 'Return Books' to the <h2> tag.
-            Also give an inline style of italics and red color to the content of <h2> tag.
-           -->
-              
-        </h2>             
-                <div>
-                    
-                <table border="1">
-                    <!--The table should have headings for its two columns: Image and Details.
-                       Display corresponding image in first column. 
-                        Image height and width should be 50%.
-                        In second column should display book details.
-                        Add a button 'Return Book' on click of which call return method by passing the bookId.
-                    -->
-                    
-                    
-                </table>
-                </div>
-    </div>
-    
+<div  align="center" ng-controller="ReturnBookCtrl">
+  <h2 ng-bind="title" ng-style="{'color':'red','font-style':'italic'}"></h2>
+  <div>
+    <table border="1">
+      <tr>
+        <th>Image</th>
+        <th>Details</th>
+      </tr>
+      <tr>
+        <td><img width="50%" height="50%" ng-src="{{book.imgUrl}}"></img></td>
+        <td>
+          <div>Book ID     : {{book.bookId}}</div>
+          <div>Book Title  : {{book.bookTitle}}</div>
+          <div>Book Topic  : {{book.topic}}</div>
+          <div>Book Author : {{book.author}}</div>
+          <div>Book Cost   : {{book.cost | currency:'Rs.'}}</div>
+          <input type="button" value="Return Book" ng-click="return(book.bookId)"></input>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
