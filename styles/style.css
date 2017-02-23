@@ -1,19 +1,19 @@
 body
 {
-background-color:#5C85FF;
+background-color:#EFFBFB;
 }
-header 
+header
 {
-background-color:#375099;
- color: white 
+background-color:#0101DF;
+ color: white
 }
 
-footer 
+footer
 {
-background-color:#375099;
- color: white 
+background-color:#0101DF;
+ color: white
 }
-.button 
+.button
 {
 border-radius:10px;
 }
@@ -38,4 +38,16 @@ border-radius: 10px;
 .issuedClass
 {
    background-color: green;
+}
+.highlight
+{
+	font-weight: bold,
+	font-style: italic;
+	color: red;
+}
+.css-form input.ng-invalid.ng-dirty {
+	background-color: pink
+}
+.css-form input.ng-valid {
+	background-color: green
 }

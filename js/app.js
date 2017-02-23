@@ -1,5 +1,5 @@
 //declare main module and its dependencies
-var mainModule = angular.module('MainModule', ['libraryModule', 'serviceModule', 'filterModule']);
+var mainModule = angular.module('MainModule', ['libraryModule', 'serviceModule', 'filterModule', 'directiveModule']);
 
 mainModule.config(function($routeProvider) {
 	$routeProvider.when('/main', {
