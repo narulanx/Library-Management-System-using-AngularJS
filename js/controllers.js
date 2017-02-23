@@ -29,6 +29,9 @@ libraryModule.controller('LoginCtrl', function($scope, $http, $rootScope, $locat
 				$location.path('/home/librarian');
 			}
 		} else {
+			alert("Invalid Credentials!");
+			$scope.name = "";
+			$scope.pass = "";
 			$location.path('/main');
 		}
 	}
