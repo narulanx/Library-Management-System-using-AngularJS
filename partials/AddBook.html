@@ -23,7 +23,7 @@
                         </tr>
                         <tr>
                             <td>Topic: </td>
-                            <td><input type="text" class="input" name="topic" ng-model="topic" required></td>
+                            <td><input ng-topic type="text" class="input" name="topic" ng-model="topic" required></td>
                         </tr>
                         <tr>
                             <td>Author: </td>
@@ -53,6 +53,7 @@
 
                         <div ng-show="form.topic.$invalid && form.topic.$dirty">
                             <div ng-show="form.topic.$error.required">Please enter topic</div>
+                            <div ng-show="!form.topic.$error.required && form.topic.$error.inputMatch">Please enter valid Topic</div>
                         </div>
 
                         <div ng-show="form.author.$invalid && form.author.$dirty">

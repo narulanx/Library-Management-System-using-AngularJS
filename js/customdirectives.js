@@ -26,3 +26,21 @@ dm.directive('highlight', function() {
  * if not, set validity to false.
  * else, set validity to true.
  */
+dm.directive('ngTopic', function() {
+	return {
+		require: 'ngModel',
+		link: function(scope, element, attr, ngModel) {
+			function validationError(input) {
+				if (input == 'AngularJS' ||
+					input == 'BackboneJS' ||
+					input == 'EmberJS' ||
+					input == 'NodeJS') {
+					ngModel.$setValidity("inputMatch", true);
+				} else {
+					ngModel.$setValidity("inputMatch", false);
+				}
+			}
+			ngModel.$parsers.push(validationError);
+		}
+	}
+})
