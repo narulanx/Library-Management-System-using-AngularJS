@@ -22,6 +22,10 @@ mainModule.config(function($routeProvider) {
 		templateUrl: 'returnBookTemplate',
 		controller: 'ReturnBookCtrl'
 	});
+	$routeProvider.when('/AddBook', {
+		templateUrl: 'addBookTemplate',
+		controller: 'AddBookCtrl'
+	});
 	$routeProvider.otherwise({
 		redirectTo: '/main'
 	});

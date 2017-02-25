@@ -67,6 +67,10 @@ libraryModule.controller('BookListCtrl_Librarian', function($scope, $location, $
 	$scope.return = function(bookId) {
 		$location.path('/return/' + bookId);
 	}
+
+	$scope.add = function() {
+		$location.path('/AddBook');
+	}
 });
 
 
@@ -103,6 +107,29 @@ libraryModule.controller('ReturnBookCtrl', function($scope, $routeParams, $rootS
 	$scope.return = function(bookId) {
 		$scope.book.issued = false;
 		alert("Book returned successfully!");
+		$location.path('/home/librarian');
+	}
+});
+
+/*
+ * Controller AddBookCtrl
+ */
+libraryModule.controller('AddBookCtrl', function($scope, $rootScope, $location, BookData) {
+	$scope.title = 'Add Book';
+
+	$scope.addBook = function(id, title, topic, author, cost) {
+		if (!$rootScope.books) {
+			BookData.getData();
+		}
+		$rootScope.books.push({
+			"bookId": id,
+			"bookTitle": title,
+			"topic": topic,
+			"author": author,
+			"cost": cost,
+			"imgUrl": "imgs/DefaultBookImage.jpg",
+			"issued": false
+		});
 		$location.path('/home/librarian');
 	}
 });
