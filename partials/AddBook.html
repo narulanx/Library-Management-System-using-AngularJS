@@ -22,19 +22,19 @@
                             <td><input type="text" class="input" name="title" ng-model="bookTitle" required ng-minlength="4" ng-maxlength="10"></td>
                         </tr>
                         <tr>
-                            <td>Topic: </td>
-                            <td><input ng-topic type="text" class="input" name="topic" ng-model="topic" required></td>
-                        </tr>
-                        <tr>
                             <td>Author: </td>
                             <td><input type="text" class="input" name="author" ng-model="author" required ng-minlength="4" ng-maxlength="10"></td>
+                        </tr>
+                        <tr>
+                            <td>Topic: </td>
+                            <td><input type="text" class="input" name="topic" ng-model="topic" required ng-topic></td>
                         </tr>
                         <tr>
                             <td>Cost: </td>
                             <td><input type="number" class="input" name="cost" ng-model="cost" required ng-minlength="1" ng-maxlength="10"></td>
                         </tr>
                         <tr>
-                            <td colspan="2"><input type="button" ng-click="addBook(bookId,bookTitle,topic,author,cost)" ng-disabled="form.id.$invalid || form.title.$invalid || form.topic.$invalid || form.author.$invalid || form.cost.$invalid" value="Add Book"></input>
+                            <td colspan="2"><input type="button" ng-click="addBook(bookId,bookTitle,topic,author,cost)" ng-disabled="form.id.$invalid || form.title.$invalid || form.topic.$invalid || form.author.$invalid || form.cost.$invalid" value="Add Book"></input></td>
                         </tr>
                         </table>
 

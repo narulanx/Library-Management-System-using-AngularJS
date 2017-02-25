@@ -30,6 +30,7 @@ dm.directive('ngTopic', function() {
 	return {
 		require: 'ngModel',
 		link: function(scope, element, attr, ngModel) {
+
 			function validationError(input) {
 				if (input == 'AngularJS' ||
 					input == 'BackboneJS' ||
@@ -42,5 +43,5 @@ dm.directive('ngTopic', function() {
 			}
 			ngModel.$parsers.push(validationError);
 		}
-	}
-})
+	};
+});
