@@ -1,0 +1,70 @@
+
+        <div  align="center">
+
+
+            <h2 ng-bind="title" ng-style="{'color':'red','font-style':'italic'}"></h2>
+                <div>
+                    <!-- disable html5 validation-->
+                    <form class="css-form" name="form" novalidate>
+
+                        <table>
+                            <!-- capture book details like:
+                            bookId, book title, book topic, author, cost.
+
+                            Create Add Book button, on click of which call addBook method by passing the book details.
+                        -->
+                        <tr>
+                            <td>Book ID: </td>
+                            <td><input name="id" class="input" type="number" ng-model="bookId" required ng-minlength="3" ng-maxlength="10"></td>
+                        </tr>
+                        <tr>
+                            <td>Book Title: </td>
+                            <td><input type="text" class="input" name="title" ng-model="bookTitle" required ng-minlength="4" ng-maxlength="10"></td>
+                        </tr>
+                        <tr>
+                            <td>Topic: </td>
+                            <td><input type="text" class="input" name="topic" ng-model="topic" required></td>
+                        </tr>
+                        <tr>
+                            <td>Author: </td>
+                            <td><input type="text" class="input" name="author" ng-model="author" required ng-minlength="4" ng-maxlength="10"></td>
+                        </tr>
+                        <tr>
+                            <td>Cost: </td>
+                            <td><input type="number" class="input" name="cost" ng-model="cost" required ng-minlength="1" ng-maxlength="10"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="button" ng-click="addBook(bookId,bookTitle,topic,author,cost)" ng-disabled="form.id.$invalid || form.title.$invalid || form.topic.$invalid || form.author.$invalid || form.cost.$invalid" value="Add Book"></input>
+                        </tr>
+                        </table>
+
+                        <!-- Add appropriate validations-->
+
+                        <!-- Handle the validations appropriately-->
+                        <div ng-show="form.id.$invalid && form.id.$dirty">
+                            <div ng-show="form.id.$error.required">Please enter bookID</div>
+                            <div ng-show="!form.id.$error.required && (!form.id.$error.ngMinLength || !form.id.$error.ngMaxLength)">Please enter valid bookID</div>
+                        </div>
+
+                        <div ng-show="form.title.$invalid && form.title.$dirty">
+                            <div ng-show="form.title.$error.required">Please enter title</div>
+                            <div ng-show="!form.title.$error.required && (!form.title.$error.ngMinLength || !form.title.$error.ngMaxLength)">Please enter valid title</div>
+                        </div>
+
+                        <div ng-show="form.topic.$invalid && form.topic.$dirty">
+                            <div ng-show="form.topic.$error.required">Please enter topic</div>
+                        </div>
+
+                        <div ng-show="form.author.$invalid && form.author.$dirty">
+                            <div ng-show="form.author.$error.required">Please enter Author</div>
+                            <div ng-show="!form.author.$error.required && (!form.aurhor.$error.ngMinLength || !form.author.$error.ngMaxLength)">Please enter valid Author</div>
+                        </div>
+
+                        <div ng-show="form.cost.$invalid && form.cost.$dirty">
+                            <div ng-show="form.cost.$error.required">Please enter Cost</div>
+                            <div ng-show="!form.cost.$error.required && (!form.cost.$error.ngMinLength || !form.cost.$error.ngMaxLength)">Please enter valid cost</div>
+                        </div>
+
+                   </form>
+                </div>
+    </div>
