@@ -18,6 +18,15 @@ This project aims at developing the Library Management System where a user can l
 	* Return a book
 	* Add a new book
 
+### Sample login credentials
+
+#### Student
+stud101/stud101
+stud102/stud102
+
+#### Librarian
+librarian/lib@123
+
 ## Tools Used
 
 - HTML5
